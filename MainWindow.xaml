@@ -1,5 +1,7 @@
 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 xmlns:local="using:LockScreen"
 xmlns:d=http://schemas.microsoft.com/expression/bleend/2008"
-xmlns:mc=""
-mc:I
+xmlns:mc="http://schemas.openxmlformats.org/markup-compatibiliy/2006"
+mc:Ignorable="d">
+
+<Grid x:Name=""
