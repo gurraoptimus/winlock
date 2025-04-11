@@ -5,4 +5,4 @@ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibiliy/2006"
 mc:Ignorable="d">
 
 <Grid x:Name="MainGrid" PreviewKeyDown="MainGrid_PreviewKeyDown">
-    <Image So
+    <Image Source="Assets/locked.jpg" Stretch="Un"
