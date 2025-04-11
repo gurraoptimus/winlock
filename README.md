@@ -4,8 +4,6 @@
     <a href="https://github.com/gurraoptimus/winlock/issues">REPORT BUG</a>
     ·
     <a href="https://github.com/gurraoptimus/winlock/issues">REQUEST FEATURE</a>
-    .
-    <a align="center>"href="#FEATURES"><b>FEATURES<b></a>
     
 <p align="center">
     <a href="https://opensource.org/licenses/Apache-2.0">
