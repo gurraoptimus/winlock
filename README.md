@@ -1,4 +1,4 @@
-<h1 align="center">winlock</h1>
+<h1 align="center">winlock🔐</h1>
 <p align="center">unlock your pc with a qr code
 <br />
     <a href="https://github.com/gurraoptimus/winlock/issues">REPORT BUG</a>
