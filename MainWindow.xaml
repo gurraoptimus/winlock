@@ -6,4 +6,4 @@ mc:Ignorable="d">
 
 <Grid x:Name="MainGrid" PreviewKeyDown="MainGrid_PreviewKeyDown">
     <Image Source="Assets/locked.jpg" Stretch="UniformToFill" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-    <pe
+    <PersonPicture DisplayName="Gurra Optimus" ProfilePicture=""
