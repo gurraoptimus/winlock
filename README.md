@@ -9,3 +9,11 @@
         <img src=" https://img.shields.io/github/license/gurraoptimus/winlock.svg?-style=flat-square" alt="Apache-2.0 License">
     </a>
 </p>
+
+
+## License
+
+This project is open-source and available under the Apache License.
+
+[license-shield]: https://img.shields.io/github/license/gurraoptimus/winlock.svg?-style=flat-square
+<!-- [license-url]: https://github.com/gurraoptimus/winlock/blob/main/LICENSE -->
