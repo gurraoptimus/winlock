@@ -6,4 +6,5 @@ mc:Ignorable="d">
 
 <Grid x:Name="MainGrid" PreviewKeyDown="MainGrid_PreviewKeyDown">
     <Image Source="Assets/locked.jpg" Stretch="UniformToFill" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-    <PersonPicture DisplayName="Gurra Optimus" ProfilePicture=""
+    <PersonPicture DisplayName="Gurra Optimus" ProfilePicture="https://learn.microsoft.com/windowns/uwp/cont" Margin="0,-450,0,0" width="200" Height="200"/>
+</Window>
