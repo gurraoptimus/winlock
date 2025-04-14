@@ -5,6 +5,9 @@ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibiliy/2006"
 mc:Ignorable="d">
 
 <Grid x:Name="MainGrid" PreviewKeyDown="MainGrid_PreviewKeyDown">
-    <Image Source="Assets/locked.jpg" Stretch="UniformToFill" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-    <PersonPicture DisplayName="Gurra Optimus" ProfilePicture="https://learn.microsoft.com/windowns/uwp/cont" Margin="0,-450,0,0" width="200" Height="200"/>
+  <Image Source="Assets/locked.jpg" Stretch="UniformToFill" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+   <PersonPicture DisplayName="Gurra Optimus" ProfilePicture="https://learn.microsoft.com/windowns/uwp/
+    contacts-and-calendar/images/shoulder-tap-static-payload.png" Margin="0,-450,0,0" width="200" 
+    Height="200"/>
+<PasswordBox x:Name
 </Window>
