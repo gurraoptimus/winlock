@@ -13,7 +13,7 @@
 ## Main Code
 ❌ [MainWindow](MainWindow.xaml)
 
-❌ [MainWindow c#](MainWindow.xaml.cs)
+❌ [MainWindow C#](MainWindow.xaml.cs)
 
 ## License
 
