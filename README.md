@@ -14,6 +14,9 @@
 ❌ [MainWindow](MainWindow.xaml)
 
 ✔ [MainWindow C#](MainWindow.xaml.cs)
+```
+csc ./MainWindow.cs
+```
 
 ## License
 
