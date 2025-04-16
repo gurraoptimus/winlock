@@ -9,5 +9,6 @@ mc:Ignorable="d">
    <PersonPicture DisplayName="Gurra Optimus" ProfilePicture="https://learn.microsoft.com/windowns/uwp/
     contacts-and-calendar/images/shoulder-tap-static-payload.png" Margin="0,-450,0,0" width="200" 
     Height="200"/>
-<PasswordBox x:Name="passwordBox" width="300" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,150,0,0" PlaceholderText="" Visibility="" 
+<PasswordBox x:Name="passwordBox" width="300" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,150,0,0" PlaceholderText="Enter your password" Visibility="Collapsed" />
+<Sta
 </window>
