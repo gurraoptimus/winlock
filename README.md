@@ -13,9 +13,9 @@
 ## Main Code
 ❌ [MainWindow](MainWindow.xaml)
 
-✔ [MainWindow C#](MainWindow.xaml.cs) Test.
+✔ [MainWindow C#](winlock.cs) Test.
 ```
-csc ./MainWindow.cs
+csc ./winlock.cs
 ```
 
 ## License
