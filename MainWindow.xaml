@@ -13,5 +13,8 @@ mc:Ignorable="d">
 Height="220" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed">
 <MediaElement x:Name="CaptureElement" VariableSizedWrapGrid.ColumnSpan="0" Stretch="Uniform" AutoPlay="True" Width="200" Height="200" />
 </StackPanel>
-<TextBlock x:Name="statusText" Text="" Margin="0,250,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="wh"
+<TextBlock x:Name="statusText" Text="" Margin="0,250,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="white"/>
+
+<Grid x:Name="InnerGrid" ColumnDefinitions="Auto,Auto" ColumnSpacing="20" HorizontalAlignment="Center">
+
 </window>
