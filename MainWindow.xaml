@@ -17,4 +17,6 @@ Height="220" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility=
 
 <Grid x:Name="InnerGrid" ColumnDefinitions="Auto,Auto" ColumnSpacing="20" HorizontalAlignment="Center">
 
+<Button
+
 </window>
