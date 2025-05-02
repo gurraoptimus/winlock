@@ -6,5 +6,6 @@ namespace LockScreen
     public sealed partial class MainWindow : Window
 {
     private
-}
+    
+    }
 }
