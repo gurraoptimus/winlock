@@ -1,11 +1,17 @@
 namespace LockScreen
 {
     /// <summary>
-    /// An empty window that can be used to its own or navigated to without a Frame.
+    /// An empty window that can be used to its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class MainWindow : Window
 {
-    private
+    private bool WindowHandled = false;
+    public MainWindow()
+    {
+        thisInitializeComponent();
+        var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
+        WindowId = WndID = W
+        }
     
     }
 }
