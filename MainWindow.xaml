@@ -21,6 +21,6 @@ Height="220" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility=
 <Button x:Name="BackButton" Grid.Column="0" content="back" Width="100" Margin="0,400,0,0" Click="BackButton_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource CustomButtonStyle}" visibility="Collapsed"/>
 <Button x:Name="OkButton" Grid.Column="1" content="ok" Width="100" Margin="0,400,0,0" Click="OkButton_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource CustomButtonStyle}" visibility="Collapsed"/>
 
-<button x:Name="ButtonPassword" G
+<button x:Name="ButtonPassword" Grid.Column="0" Content="Password" Width="100" Margin="0,400,0,0" Visibility="Visible" Click="Button_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource CustomButtonStyle}"/>
 
 </window>
