@@ -1,17 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace loggerDemo
+namespace LockScreen
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.Write("This is a test");
-            Console.Read();
-        }
-    }
+    /// <summary>
+    /// An empty window that can be used to its own or navigated to without a Frame.
+    /// </summary>
+    public sealed partial class MainWindow : Window
+{
+    private
+}
 }
