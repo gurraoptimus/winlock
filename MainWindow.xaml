@@ -22,5 +22,9 @@ Height="220" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility=
 <Button x:Name="OkButton" Grid.Column="1" content="ok" Width="100" Margin="0,400,0,0" Click="OkButton_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource CustomButtonStyle}" visibility="Collapsed"/>
 
 <button x:Name="ButtonPassword" Grid.Column="0" Content="Password" Width="100" Margin="0,400,0,0" Visibility="Visible" Click="Button_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource CustomButtonStyle}"/>
+<button x:Name="ButtonQRCode" Grid.Column="1" Content="QR-Code" Width="100" Margin="0,400,0,0" Visibility="Visible" Click="Button_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource CustomButtonStyle}"/>
+</Grid>
+<Image source="c:unlockQRCode.png" stretch="Uniform" width="150" height="150" VerticalAlignment="Bottom"/>
+</Grid>
 
 </window>
