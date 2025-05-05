@@ -1,5 +1,3 @@
-using System;
-
 namespace LockScreen
 {
     /// <summary>
@@ -15,7 +13,8 @@ namespace LockScreen
         WindowId = WndID = Win32Interop.GetWindowIdFromWindow(hwnd);
         AppWindow appW = AppWindow.GetFromWindowId(WindID);
         OverlappedPresenter presenter = appW.Presenter as OverlappedPresenter;
-        pr
+        presenter.IsAlwaysOnTop = true;
+        //appW.
         }
     
     }
