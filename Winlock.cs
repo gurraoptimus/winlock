@@ -10,7 +10,8 @@ namespace LockScreen
     {
         thisInitializeComponent();
         var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
-        WindowId = WndID = W
+        WindowId = WndID = Win32Interop.GetWindowIdFromWindow(hwnd);
+
         }
     
     }
