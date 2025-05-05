@@ -11,7 +11,9 @@ namespace LockScreen
         thisInitializeComponent();
         var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
         WindowId = WndID = Win32Interop.GetWindowIdFromWindow(hwnd);
-
+        AppWindow appW = AppWindow.GetFromWindowId(WindID);
+        OverlappedPresenter presenter = appW.Presenter as OverlappedPresenter;
+        pr
         }
     
     }
