@@ -11,7 +11,7 @@
 </p>
 
 ## Main Code
-❌ [MainWindow](MainWindow.xaml)
+❌ [MainWindow](MainWindow.xaml) debug!
 
 ❌ [Winlock C#](Winlock.cs) debug!
 ```
