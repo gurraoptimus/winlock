@@ -19,6 +19,9 @@ namespace LockScreen
         appW.SetPresenter(AppWindowPresenterKind.FullScreen);
         this.closed += MainWindow_Closed;
         }
-        private void Button_click(object
+        private void Button_click(object sender, RoutedEventArgs e)
+        {
+            if (((Button)sender).name == "ButtonPassword")
+        }
     }
 }
