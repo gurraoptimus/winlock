@@ -16,8 +16,9 @@ namespace LockScreen
         AppWindow appW = AppWindow.GetFromWindowId(WindID);
         OverlappedPresenter presenter = appW.Presenter as OverlappedPresenter;
         presenter.IsAlwaysOnTop = true;
-        //appW.
+        appW.SetPresenter(AppWindowPresenterKind.FullScreen);
+        this.closed += MainWindow_Closed;
         }
-    
+        private void Button_click(object
     }
 }
