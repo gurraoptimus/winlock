@@ -10,7 +10,7 @@ namespace LockScreen
     private bool WindowHandled = false;
     public MainWindow()
     {
-        thisInitializeComponent();
+        this.InitializeComponent();
         var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
         WindowId = WndID = Win32Interop.GetWindowIdFromWindow(hwnd);
         AppWindow appW = AppWindow.GetFromWindowId(WindID);
@@ -22,6 +22,7 @@ namespace LockScreen
         private void Button_click(object sender, RoutedEventArgs e)
         {
             if (((Button)sender).name == "ButtonPassword")
+
         }
     }
 }
