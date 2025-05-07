@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System;
 
 namespace LockScreen
@@ -32,7 +33,7 @@ namespace LockScreen
             }
             else if (((Button)sender).name == "ButtonQRCode")
             {
-                ButtonQRCode.Visibility = Visibility.Collapsed;
+                ButtonQRCode.Visibility = Visibility.Collapsed:
                 ButtonOK.Visibility = Visibility.Visible;
                 CaptureElementPanel.Visibility = Visibility.Visible;
                 BackButton.Visibility = Visibility.Visible;
