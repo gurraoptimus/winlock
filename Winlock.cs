@@ -11,18 +11,18 @@ namespace LockScreen
     private bool WindowHandled = false;
     public MainWindow()
     {
-        this.InitializeComponent()
+        this.InitializeComponent();
         var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
-        WindowId = WndID = Win32Interop.GetWindowIdFromWindow(hwnd);
+        var WndID = Win32Interop.GetWindowIdFromWindow(hwnd);
         AppWindow appW = AppWindow.GetFromWindowId(WndID);
         OverlappedPresenter presenter = appW.Presenter as OverlappedPresenter;
         presenter.IsAlwaysOnTop = true;
         appW.SetPresenter(AppWindowPresenterKind.FullScreen);
-        this.closed += MainWindow_Closed;
+        this.Closed += MainWindow_Closed;
         }
         private void OnButtonClick(object sender, RoutedEventArgs e)
         {
-            if (((Button)sender).name == "ButtonPassword")
+            if (((Button)sender).Name == "ButtonPassword")
             {
                 passwordBox.Visibility = Visibility.Visible;
                 ButtonQRCode.Visibility = Visibility.Collapsed;
@@ -31,9 +31,9 @@ namespace LockScreen
                 BackButton.Visibility = Visibility.Visible;
                 return;
             }
-            else if (((Button)sender).name == "ButtonQRCode")
+            else if (((Button)sender).Name == "ButtonQRCode")
             {
-                ButtonQRCode.Visibility = Visibility.Collapsed:
+                ButtonQRCode.Visibility = Visibility.Collapsed;
                 ButtonOK.Visibility = Visibility.Visible;
                 CaptureElementPanel.Visibility = Visibility.Visible;
                 BackButton.Visibility = Visibility.Visible;
@@ -42,9 +42,9 @@ namespace LockScreen
                 return;
             }
 
-            if (passwordBox.Pasword != "password")
+            if (passwordBox.Password != "password")
             {
-                statusText.Text = "the passwowrd is incorrect. Try again.";
+                statusText.Text = "The password is incorrect. Try again.";
             }
         }
     }
