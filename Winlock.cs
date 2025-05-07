@@ -10,7 +10,7 @@ namespace LockScreen
     private bool WindowHandled = false;
     public MainWindow()
     {
-        this.InitializeComponent();
+        this.InitializeComponent().
         var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
         WindowId = WndID = Win32Interop.GetWindowIdFromWindow(hwnd);
         AppWindow appW = AppWindow.GetFromWindowId(WindID);
@@ -30,7 +30,17 @@ namespace LockScreen
                 BackButton.Visibility = Visibility.Visible;
                 return;
             }
-            //else 
-        }
+            else if (((Button)sender).name == "ButtonQRCode")
+            {
+                ButtonQRCode.Visibility = Visibility.Collapsed;
+                ButtonOK.Visibility = Visibility.Visible;
+                CaptureElementPanel.Visibility = Visibility.Visible;
+                BackButton.Visibility = Visibility.Visible;
+                ButtonPassword.Visibility = Visibility.Collapsed;
+                startCaptureElement();
+                return;
+            }
+
+            if (pass)
     }
 }
