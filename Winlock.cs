@@ -14,7 +14,7 @@ namespace LockScreen
         this.InitializeComponent().
         var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
         WindowId = WndID = Win32Interop.GetWindowIdFromWindow(hwnd);
-        AppWindow appW = AppWindow.GetFromWindowId(WindID);
+        AppWindow appW = AppWindow.GetFromWindowId(WndID);
         OverlappedPresenter presenter = appW.Presenter as OverlappedPresenter;
         presenter.IsAlwaysOnTop = true;
         appW.SetPresenter(AppWindowPresenterKind.FullScreen);
@@ -22,19 +22,19 @@ namespace LockScreen
         }
         private void Button_click(object sender, RoutedEventArgs e)
         {
-            if (((Button)sender).name == "ButtonPassword")
+            if (((Button)sender).Name == "ButtonPassword")
             {
                 passwordBox.Visibility = Visibility.Visible;
                 ButtonQRCode.Visibility = Visibility.Collapsed;
                 ButtonPassword.Visibility = Visibility.Collapsed;
-                ButtonOK.Visibility = Visibility.Visible;
+                OkButton.Visibility = Visibility.Visible;
                 BackButton.Visibility = Visibility.Visible;
                 return;
             }
-            else if (((Button)sender).name == "ButtonQRCode")
+            else if (((Button)sender).Name == "ButtonQRCode")
             {
                 ButtonQRCode.Visibility = Visibility.Collapsed;
-                ButtonOK.Visibility = Visibility.Visible;
+                OkButton.Visibility = Visibility.Visible;
                 CaptureElementPanel.Visibility = Visibility.Visible;
                 BackButton.Visibility = Visibility.Visible;
                 ButtonPassword.Visibility = Visibility.Collapsed;
@@ -44,13 +44,14 @@ namespace LockScreen
 
             if (passwordBox.Password != "password")
             {
-                statusText.Text = "the passwowrd is incorrect. Try again.";
+                statusText.Text = "the password is incorrect. Try again.";
         }
         else
         {
             WindowHandled = false;
-            this.close();
+            this.Close();
         }
-        private M
+        private MediaFrameSourceGroup mediaFrameSourceGroup;
+        
    }    
 }
