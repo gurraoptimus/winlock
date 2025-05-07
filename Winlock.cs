@@ -11,18 +11,18 @@ namespace LockScreen
     private bool WindowHandled = false;
     public MainWindow()
     {
-        this.InitializeComponent();
+        this.InitializeComponent().
         var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
-        var WndID = Win32Interop.GetWindowIdFromWindow(hwnd);
-        AppWindow appW = AppWindow.GetFromWindowId(WndID);
+        WindowId = WndID = Win32Interop.GetWindowIdFromWindow(hwnd);
+        AppWindow appW = AppWindow.GetFromWindowId(WindID);
         OverlappedPresenter presenter = appW.Presenter as OverlappedPresenter;
         presenter.IsAlwaysOnTop = true;
         appW.SetPresenter(AppWindowPresenterKind.FullScreen);
-        this.Closed += MainWindow_Closed;
+        this.closed += MainWindow_Closed;
         }
-        private void OnButtonClick(object sender, RoutedEventArgs e)
+        private void Button_click(object sender, RoutedEventArgs e)
         {
-            if (((Button)sender).Name == "ButtonPassword")
+            if (((Button)sender).name == "ButtonPassword")
             {
                 passwordBox.Visibility = Visibility.Visible;
                 ButtonQRCode.Visibility = Visibility.Collapsed;
@@ -31,7 +31,7 @@ namespace LockScreen
                 BackButton.Visibility = Visibility.Visible;
                 return;
             }
-            else if (((Button)sender).Name == "ButtonQRCode")
+            else if (((Button)sender).name == "ButtonQRCode")
             {
                 ButtonQRCode.Visibility = Visibility.Collapsed;
                 ButtonOK.Visibility = Visibility.Visible;
@@ -42,10 +42,10 @@ namespace LockScreen
                 return;
             }
 
-            if (passwordBox.Password != "password")
+            if (passwordBox.Pasword != "password")
             {
-                statusText.Text = "The password is incorrect. Try again.";
+                statusText.Text = "the passwowrd is incorrect. Try again.";
             }
-        }
+        }    
     }
 }
