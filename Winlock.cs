@@ -42,9 +42,15 @@ namespace LockScreen
                 return;
             }
 
-            if (passwordBox.Pasword != "password")
+            if (passwordBox.Password != "password")
             {
                 statusText.Text = "the passwowrd is incorrect. Try again.";
         }
+        else
+        {
+            WindowHandled = false;
+            this.close();
+        }
+        private M
    }    
 }
