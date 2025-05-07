@@ -52,6 +52,13 @@ namespace LockScreen
             this.Close();
         }
         private MediaFrameSourceGroup mediaFrameSourceGroup;
+        private MediaCapture mediaCapture;
+        private bool isScanning = false;
+
+        private async void startCaptureElement(){
+
+        }
         
-   }    
+        }
+    }    
 }
