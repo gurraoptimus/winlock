@@ -10,16 +10,16 @@ namespace LockScreen
     private bool WindowHandled = false;
     public MainWindow()
     {
-        this.InitializeComponent().
+        this.InitializeComponent()
         var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
         WindowId = WndID = Win32Interop.GetWindowIdFromWindow(hwnd);
-        AppWindow appW = AppWindow.GetFromWindowId(WindID);
+        AppWindow appW = AppWindow.GetFromWindowId(WndID);
         OverlappedPresenter presenter = appW.Presenter as OverlappedPresenter;
         presenter.IsAlwaysOnTop = true;
         appW.SetPresenter(AppWindowPresenterKind.FullScreen);
         this.closed += MainWindow_Closed;
         }
-        private void Button_click(object sender, RoutedEventArgs e)
+        private void OnButtonClick(object sender, RoutedEventArgs e)
         {
             if (((Button)sender).name == "ButtonPassword")
             {
@@ -43,8 +43,8 @@ namespace LockScreen
 
             if (passwordBox.Pasword != "password")
             {
-                statusText.Text = "the passwowrd is incorrect. Try again."
+                statusText.Text = "the passwowrd is incorrect. Try again.";
             }
-
+        }
     }
 }
