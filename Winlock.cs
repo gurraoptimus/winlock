@@ -22,7 +22,15 @@ namespace LockScreen
         private void Button_click(object sender, RoutedEventArgs e)
         {
             if (((Button)sender).name == "ButtonPassword")
-
+            {
+                passwordBox.Visibility = Visibility.Visible;
+                ButtonQRCode.Visibility = Visibility.Collapsed;
+                ButtonPassword.Visibility = Visibility.Collapsed;
+                ButtonOK.Visibility = Visibility.Visible;
+                BackButton.Visibility = Visibility.Visible;
+                return;
+            }
+            //else 
         }
     }
 }
