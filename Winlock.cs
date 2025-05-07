@@ -41,6 +41,7 @@ namespace LockScreen
                 return;
             }
 
-            if (pass)
+            if (passwordBox.Pasword != "password")
+            {}
     }
 }
