@@ -45,7 +45,6 @@ namespace LockScreen
             if (passwordBox.Pasword != "password")
             {
                 statusText.Text = "the passwowrd is incorrect. Try again.";
-            }
-        }    
-    }
+        }
+   }    
 }
