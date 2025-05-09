@@ -55,8 +55,13 @@ namespace LockScreen
         private MediaCapture mediaCapture;
         private bool isScanning = false;
 
-        private async void startCaptureElement(){
-
+        private async void startCaptureElement()
+        {
+            var groups= await MediaFrameSourceGroup.FindAllAsync();
+            if (groups.Count == 0)
+            {
+                statu
+            }
         }
         
         }
