@@ -60,7 +60,7 @@ namespace LockScreen
             var groups= await MediaFrameSourceGroup.FindAllAsync();
             if (groups.Count == 0)
             {
-                statu
+                statusText.text
             }
         }
         
