@@ -60,10 +60,14 @@ namespace LockScreen
             var groups= await MediaFrameSourceGroup.FindAllAsync();
             if (groups.Count == 0)
             {
-                statusText.text
+                statusText.text = "No camera found.";
+                return;
             }
         }
         
-        }
+        mediaFrameSourceGroup = groups.First();
+
+        mediaCapture = new MediaCapture();
+        var medi
     }    
 }
