@@ -77,6 +77,8 @@ namespace LockScreen
         };
         await mediaCapture.InitializeAsync(mediaCaptureInitializationSettings);
         var frameSource = mediaCapture.FrameSources[this.mediaFrameSourceGroup.SourceInfos[0].Id];
-        captureElement.Source = Windows.Media.Core.M
+        captureElement.Source = Windows.Media.Core.MediaSource.CreateFromMidiaFrameSource(frameSource);
+
+        StartSc
     }    
 }
