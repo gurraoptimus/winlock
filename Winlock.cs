@@ -68,6 +68,12 @@ namespace LockScreen
         mediaFrameSourceGroup = groups.First();
 
         mediaCapture = new MediaCapture();
-        var medi
+        var mediaCaptureInitializationSettings = new MediaCaptureInitializationSettings
+        {
+            SourceGroup = mediaFrameSourceGroup,
+            SharingMode = MediaCaptureSharingMode.SharedReadOnly,
+            StreamingCaptureMode = StreamingCaptureMode.Video
+            Mem           
+        };
     }    
 }
