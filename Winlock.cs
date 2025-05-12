@@ -73,7 +73,10 @@ namespace LockScreen
             SourceGroup = mediaFrameSourceGroup,
             SharingMode = MediaCaptureSharingMode.SharedReadOnly,
             StreamingCaptureMode = StreamingCaptureMode.Video
-            Mem           
+            MemoryPreference = MediaMemoryPreference.Auto       
         };
+        await mediaCapture.InitializeAsync(mediaCaptureInitializationSettings);
+        var frameSource = mediaCapture.FrameSources[this.mediaFrameSourceGroup.SourceInfos[0].Id];
+        captureElement.Source = Windows.Media.Core.M
     }    
 }
