@@ -79,6 +79,31 @@ namespace LockScreen
         var frameSource = mediaCapture.FrameSources[this.mediaFrameSourceGroup.SourceInfos[0].Id];
         captureElement.Source = Windows.Media.Core.MediaSource.CreateFromMidiaFrameSource(frameSource);
 
-        StartSc
-    }    
+        StartScanning();
+    }
+    private async void StartScanning()
+    {
+        isScanning = true;
+        statusText.Text = "Scanning...";
+
+        while (isScanning)
+        {
+            var imgFormat = ImageEncodingProperties.CreateJpeg();
+            var stream = new InMemoryRandomAccessStream();
+            await mediaCapture.CapturePhotoToStreamAsync(imgFormat, stream);
+            stream.Seek(0);
+            BitmapImage bmpImage = new BitmapImage();
+            wait bmpImage.SetSourceAsync(stream);
+
+
+        try
+        {
+            byte[] byteArray;
+            using (DataReader dataReader = new DataReader(stream.GetInputStreamAt(0)))
+            {
+                byteArray = new byte[stream.Size];
+                await dataReader.LoadAsync((uint)stream.Size);
+                dataReader.ReadBytes(byteArray);
+                }      
+                us
 }
