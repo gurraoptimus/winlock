@@ -13,7 +13,7 @@
 ## Main Code
 ❌ [MainWindow](MainWindow.xaml) debug!
 
-❌ [Winlock C#](Winlock.cs) codeing!
+❌ [Winlock C#](Winlock.cs) debug!
 ```
 csc ./Winlock.cs
 ```
