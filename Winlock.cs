@@ -11,14 +11,14 @@ namespace LockScreen
     private bool WindowHandled = false;
     public MainWindow()
     {
-        this.InitializeComponent().
+        this.InitializeComponent():
         var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
         WindowId = WndID = Win32Interop.GetWindowIdFromWindow(hwnd);
         AppWindow appW = AppWindow.GetFromWindowId(WndID);
         OverlappedPresenter presenter = appW.Presenter as OverlappedPresenter;
         presenter.IsAlwaysOnTop = true;
         appW.SetPresenter(AppWindowPresenterKind.FullScreen);
-        this.closed += MainWindow_Closed;
+        this.Closed += MainWindow_Closed;
         }
         private void Button_click(object sender, RoutedEventArgs e)
         {
@@ -109,5 +109,5 @@ namespace LockScreen
                 {
                     Bitmap bitmap = new Bitmap(memoryStream);
                     BarcodeReader reader = new BarcodeReader {AutoRotate = 
-                }
+                    }
 }
