@@ -86,24 +86,24 @@ namespace LockScreen
         isScanning = true;
         statusText.Text = "Scanning...";
 
-        while (isScanning)
-        {
-            var imgFormat = ImageEncodingProperties.CreateJpeg();
-            var stream = new InMemoryRandomAccessStream();
-            await mediaCapture.CapturePhotoToStreamAsync(imgFormat, stream);
-            stream.Seek(0);
-            BitmapImage bmpImage = new BitmapImage();
-            wait bmpImage.SetSourceAsync(stream);
+            while (isScanning)
+            {
+                var imgFormat = ImageEncodingProperties.CreateJpeg();
+                var stream = new InMemoryRandomAccessStream();
+                await mediaCapture.CapturePhotoToStreamAsync(imgFormat, stream);
+                stream.Seek(0);
+                BitmapImage bmpImage = new BitmapImage();
+                wait bmpImage.SetSourceAsync(stream);
 
 
-        try
+                try
         }
             byte[] byteArray;
-            using (DataReader dataReader = new DataReader(stream.GetInputStreamAt(0)))
-            {
-                byteArray = new byte[stream.Size];
-                await dataReader.LoadAsync((uint)stream.Size);
-                dataReader.ReadBytes(byteArray);
+                using (DataReader dataReader = new DataReader(stream.GetInputStreamAt(0)))
+                {
+                    byteArray = new byte[stream.Size];
+                    await dataReader.LoadAsync((uint)stream.Size);
+                    dataReader.ReadBytes(byteArray);
                 }
                 using (MemoryStream memoryStream = new MemoryStream(byteArray))
                 {
@@ -112,8 +112,25 @@ namespace LockScreen
 
                     Result result = reader.Decode(bitmap);
 
-                    if ()
-                    
-     }                   
+                    if (result != null)
+                    {
+                        string Decoded = result.ToString().Trim();
+                        if (Decoded == "password")
+                        { stopScanningButton_click(null, null)
+                            windowHandled = false;
+
+                            this.Close();
+
+                        }
+                        break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                console.WriteLine($"Error occurred: {ex.Message}");
+            }
+            await Task.Delay(2000); // Delay to avoid high CPU usage
+        }
     }
-}
+private void 
