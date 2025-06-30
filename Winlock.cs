@@ -104,10 +104,16 @@ namespace LockScreen
                 byteArray = new byte[stream.Size];
                 await dataReader.LoadAsync((uint)stream.Size);
                 dataReader.ReadBytes(byteArray);
-                }      
+                }
                 using (MemoryStream memoryStream = new MemoryStream(byteArray))
                 {
                     Bitmap bitmap = new Bitmap(memoryStream);
-                    BarcodeReader reader = new BarcodeReader {AutoRotate = 
-                    }
+                    BarcodeReader reader = new BarcodeReader { AutoRotate = true, Options = { TryInverted = true } };
+
+                    Result result = reader.Decode(bitmap);
+
+                    if ()
+                    
+     }                   
+    }
 }
